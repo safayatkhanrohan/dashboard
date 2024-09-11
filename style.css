@@ -1,0 +1,56 @@
+/* roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+    background-color: #efefef;
+    font-family: "Roboto", sans-serif;
+}
+
+#login-container {
+    height: 100vh;
+
+}
+
+#login-form {
+    height: 400px;
+    width: 420px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.14);
+    color: rgba(70, 70, 70);
+    text-align: center;
+}
+
+#login-form h2 {
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: .5rem;
+}
+
+#login-form h5 {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+/* modifying boostrap component */
+
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #efefef;
+    border-radius: 0;
+    padding: 0;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border: none;
+    border-bottom: 2px solid #303F9F;
+}
+
