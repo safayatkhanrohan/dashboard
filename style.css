@@ -1,56 +1,121 @@
 /* roboto font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
-    background-color: #efefef;
-    font-family: "Roboto", sans-serif;
+  background-color: #efefef;
+  font-family: "Roboto", sans-serif;
 }
 
 #login-container {
-    height: 100vh;
-
+  height: 100vh;
 }
 
 #login-form {
-    height: 400px;
-    width: 420px;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.14);
-    color: rgba(70, 70, 70);
-    text-align: center;
+  width: 420px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.14);
+  color: rgba(70, 70, 70);
+  text-align: center;
 }
 
 #login-form h2 {
-    font-weight: 700;
-    font-size: 30px;
-    margin-top: .5rem;
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 0.5rem;
 }
 
 #login-form h5 {
-    font-weight: 400;
-    font-size: 14px;
+  font-weight: 400;
+  font-size: 14px;
 }
+
+.floating-label {
+  position: relative;
+}
+
+.floating-label input {
+  margin-top: 2rem;
+  border: none;
+  border-bottom: 1px solid #efefef;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  padding: 5px 0;
+}
+
+.floating-label input:focus {
+  border-bottom: 2px solid #303f9f;
+}
+
+.floating-label label {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.floating-label input:focus + label {
+  top: 5px;
+  font-size: 12px;
+  color: #303f9f;
+}
+
+.floating-label label.typed {
+  top: 1rem;
+}
+
+#login-form .form-check input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  margin-right: 10px; /* Space between checkbox and label */
+}
+
+#login-form .form-check input:checked {
+  border: 1px solid #303f9f;
+  background-color: #303f9f;
+  color: #fff;
+  cursor: pointer;
+}
+
+#login-form .form-check label {
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+/*dashboard*/
+
+#dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  flex-basis: 220px;
+  flex-shrink: 0;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 0px 10px 0px;
+}
+
 
 
 /* modifying boostrap component */
 
-
-.form-control {
-    border: none;
-    border-bottom: 1px solid #efefef;
-    border-radius: 0;
-    padding: 0;
+.btn-success {
+  background-color: #4caf50;
+  border-color: #4aab4e;
+  border-radius: 3px;
 }
 
-.form-control:focus {
-    outline: none;
-    box-shadow: none;
+.btn-success:hover {
+    background-color: #3D8B40;
+    border-color: #3D8B40;
 }
-
-.form-control:focus {
-    border: none;
-    border-bottom: 2px solid #303F9F;
-}
-

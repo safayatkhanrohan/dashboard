@@ -1,10 +1,18 @@
 
-const formInput = document.querySelector('.form-control');
 
-formInput.addEventListener('focus', () => {
-    formInput.classList.add('custom-focused');
+const inputFileds = document.querySelectorAll("input");
+
+inputFileds.forEach((input) => {
+  const label = input.nextElementSibling;
+
+  input.addEventListener("input", function () {
+    if (input.value.trim() !== "") {
+      label.classList.add("typed");
+    } else {
+      label.classList.remove("typed");
+    }
+  });
+
 });
 
-formInput.addEventListener('blur', () => {
-    formInput.classList.remove('custom-focused') // Correct spelling: 'transparent'
-});
+
