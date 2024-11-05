@@ -6,106 +6,227 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-#login-container {
-  height: 100vh;
-}
-
-#login-form {
-  width: 420px;
-  padding: 30px;
-  background-color: #fff;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.14);
-  color: rgba(70, 70, 70);
-  text-align: center;
-}
-
-#login-form h2 {
-  font-weight: 700;
-  font-size: 30px;
-  margin-top: 0.5rem;
-}
-
-#login-form h5 {
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.floating-label {
-  position: relative;
-}
-
-.floating-label input {
-  margin-top: 2rem;
-  border: none;
-  border-bottom: 1px solid #efefef;
-  width: 100%;
-  font-size: 14px;
-  font-weight: 400;
-  outline: none;
-  padding: 5px 0;
-}
-
-.floating-label input:focus {
-  border-bottom: 2px solid #303f9f;
-}
-
-.floating-label label {
-  position: absolute;
-  top: 2rem;
-  left: 0;
-  font-size: 14px;
-  font-weight: 400;
-  transition: all 0.3s;
-}
-
-.floating-label input:focus + label {
-  top: 5px;
-  font-size: 12px;
-  color: #303f9f;
-}
-
-.floating-label label.typed {
-  top: 1rem;
-}
-
-#login-form .form-check input {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 0;
-  margin-right: 10px; /* Space between checkbox and label */
-}
-
-#login-form .form-check input:checked {
-  border: 1px solid #303f9f;
-  background-color: #303f9f;
-  color: #fff;
-  cursor: pointer;
-}
-
-#login-form .form-check label {
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 3px;
-}
 
 /*dashboard*/
 
 #dashboard-container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .sidebar {
-  flex-basis: 220px;
+  width: 220px;
   flex-shrink: 0;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 0px 10px 0px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
+.sidebar.collapsed {
+  width: 65px;
+}
 
+.sidebar.collapsed:hover {
+  width: 220px;
+}
+
+.sidebar-header {
+  position: absolute;
+  width: 100%;
+  background-color: #303f9f;
+  color: #fff;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sidebar-header .site-logo {
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  position: relative;
+}
+
+.sidebar-header .site-logo > * {
+  margin-left: 20px;
+}
+
+.sidebar-header .site-logo span {
+  position: absolute;
+}
+
+.sidebar-menu {
+  height: calc(100vh - 55px);
+  background-color: #fff;
+  position: absolute;
+  width: 220px;
+  top: 55px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 0;
+  }
+  .sidebar.collapsed {
+    width: 0;
+  }
+  .sidebar-menu {
+    position: fixed;
+    width: 0;
+  }
+  .sidebar-menu.active {
+    width: 220px;
+  }
+}
+
+.main {
+  position: relative;
+  flex: 1;
+}
+
+.main-header {
+  background-color: #3f51b5;
+  color: #fff;
+  height: 55px;
+  width: 100%;
+}
+
+.main-header ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+.main-header ul li:first-child ion-icon {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.main-header ul li {
+  display: flex;
+  margin-left: 20px;
+}
+
+.main-header ul li ion-icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+}
+
+.main-header ul li .search {
+  padding: 6px 15px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.main-header ul li .search input {
+  border: none;
+  outline: none;
+}
+
+.main-header ul li .search button[type="submit"] {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-header ul li .search button[type="submit"] ion-icon {
+  color: #000;
+  padding-right: 0;
+}
+
+.main-header ul li:first-child {
+  font-size: 1.5rem;
+}
+
+.main-header ul li.show-xs.site-name {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .main-header ul li {
+    display: none;
+  }
+
+  .main-header ul li.show-xs {
+    display: flex;
+  }
+
+  .main-header ul li.show-xs.site-name {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.profile {
+  padding: 10px 0px 10px 7px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profile .group {
+}
+
+.profile .group .dropdown a {
+  color: #303f9f;
+  text-decoration: none;
+}
+
+#leftMenu li a {
+  padding: 7px 15px;
+  padding-left: 12px;
+  display: table;
+  background: #f7f7f7;
+  color: #616161;
+  text-decoration: none;
+  width: 100%;
+
+}
+
+#leftMenu li a ion-icon {
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  width: 40px;
+  padding: 5px;
+  border-color: #8aa2ae;
+  background: #607d8b;
+}
 
 /* modifying boostrap component */
 
@@ -116,6 +237,13 @@ body {
 }
 
 .btn-success:hover {
-    background-color: #3D8B40;
-    border-color: #3D8B40;
+  background-color: #3d8b40;
+  border-color: #3d8b40;
+}
+.dropdown-menu {
+  transform: translate(-34px, 23px) !important;
+}
+.dropdown-item.active,
+.dropdown-item:focus {
+  background-color: transparent !important;
 }

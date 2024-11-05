@@ -26,15 +26,197 @@
   <body>
     <div id="dashboard-container">
       <div class="sidebar">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore quia dolorum beatae at accusantium ratione cum asperiores quaerat accusamus sequi!
+        <header class="sidebar-header">
+            <a href="#" class="site-logo">
+            <ion-icon name="wifi-sharp"></ion-icon>
+            <span>EASY BILL</span>
+          </a>
+        </header>
+        <div class="sidebar-menu z-3">
+          <div class="profile mb-3">
+            <img
+              src="https://robohash.org/1?set=set3&amp;size=100x100&amp;bgset=bg1"
+              alt="admin"
+            />
+            <div class="group">
+              <div class="dropdown">
+                <a
+                  class="dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Administrator
+                </a>
+                <ul class="dropdown-menu rounded-0 border-light-subtle">
+                  <li><a class="dropdown-item text-black" href="#"><ion-icon name="person"></ion-icon><span class="ms-2">My Account</span></a></li>
+                  <li><a class="dropdown-item text-black" href="#"><ion-icon name="settings"></ion-icon><span class="ms-2">Change Password</span></a></li>
+                  <li>
+                    <a class="dropdown-item text-black" href="#"><ion-icon name="power"></ion-icon><span class="ms-2">Log Out</span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <small class="desig"> Administrator </small>
+            </div>
+          </div>
+
+          <ul id="leftMenu" class="list-unstyled">
+					<li class="active waves-effect">
+						<a href="https://webmagnetify.com/phpmixbill/index.php?_route=dashboard">
+              <ion-icon name="desktop-sharp"></ion-icon>
+							<span class="text">Dashboard</span>
+						</a>
+					</li>
+                    
+									<li class="waves-effect">
+						<a href="#">
+							<i class="ion ion-android-contacts"></i>
+							<span class="text">Customer</span>
+							<i class="arrow ion-chevron-left"></i>
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=customers/add">Add New Contact</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=customers/list">List Contact</a></li>
+                            
+						</ul>
+					</li>
+                    
+					<li class="waves-effect">
+						<a href="#">
+							<i class="ion ion-card"></i>
+							<span class="text">Prepaid</span>
+							<i class="arrow ion-chevron-left"></i>
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=prepaid/list">Prepaid Users</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=prepaid/voucher">Prepaid Vouchers</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=prepaid/refill">Refill Account</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=prepaid/recharge">Recharge Account</a></li>
+                            
+						</ul>
+					</li>
+                    
+					<li class="waves-effect">
+						<a href="#">
+							<i class="ion ion-cube"></i>
+							<span class="text">Services</span>
+							<i class="arrow ion-chevron-left"></i>
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=services/hotspot">Hotspot Plans</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=services/pppoe">PPPOE Plans</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=bandwidth/list">Bandwidth Plans</a></li>
+                            
+						</ul>
+					</li>
+                    
+					<li class="waves-effect">
+						<a href="#">
+							<i class="ion ion-clipboard"></i>
+							<span class="text">Reports</span>
+							<i class="arrow ion-chevron-left"></i>
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=reports/daily-report">Daily Reports</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=reports/by-period">Period Reports</a></li>
+                            
+						</ul>
+					</li>
+                    
+													<li class="waves-effect">
+						<a href="#">
+							<i class="ion ion-network"></i>
+							<span class="text">Network</span>
+							<i class="arrow ion-chevron-left"></i>
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=routers/list">Routers</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=pool/list">IP Pool</a></li>
+                            
+						</ul>
+					</li>
+                    
+					<li class="waves-effect">
+						<a href="#">
+							<i class="ion ion-document"></i>
+							<span class="text">Static Pages</span>
+							<i class="arrow ion-chevron-left"></i>
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=pages/Order_Voucher">Order Voucher</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=pages/Voucher">Voucher Template</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=pages/Announcement">Announcement Editor</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=pages/Registration_Info">Registration Info Editor</a></li>
+                            
+						</ul>
+					</li>
+                    
+					<li class="waves-effect">
+						<a href="#">
+							<i class="ion ion-gear-a"></i>
+							<span class="text">Settings</span>
+							<i class="arrow ion-chevron-left"></i>
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=settings/app">General Settings</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=settings/localisation">Localisation</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=settings/users">Administrator Users</a></li>
+							<li class=" waves-effect"><a href="https://webmagnetify.com/phpmixbill/index.php?_route=settings/dbstatus">Backup/Restore</a></li>
+							
+						</ul>
+					</li>
+                    
+                    <li class=" waves-effect">
+						<a href="https://webmagnetify.com/phpmixbill/index.php?_route=paymentgateway">
+							<i class="ion ion-cash"></i>
+							<span class="text">Payment Gateway</span>
+						</a>
+					</li>
+                    
+					<li class=" waves-effect">
+						<a href="https://webmagnetify.com/phpmixbill/index.php?_route=community">
+							<i class="ion ion-chatboxes"></i>
+							<span class="text">Community</span>
+						</a>
+					</li>
+								</ul>
+        </div>
       </div>
 
       <div class="main">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi eveniet repudiandae minima esse. Facere ex, alias laboriosam illum sunt eligendi?
+        <header class="main-header">
+          <ul class="position-relative">
+            <li class="show-xs">
+              <ion-icon name="menu" toggle="sidebar-toggler"></ion-icon>
+            </li>
+            <li>
+              <form class="search">
+                <input
+                  type="text"
+                  placeholder="Search customer...
+              "
+                />
+                <button type="submit">
+                  <ion-icon name="search-outline"></ion-icon>
+                </button>
+              </form>
+            </li>
+            <li><ion-icon name="scan"></ion-icon></li>
+            <li class="show-xs site-name">
+              <a href="#" class="text-white fs-3 text-decoration-none"
+                >EASY BILL</a
+              >
+            </li>
+            <li class="ms-auto me-4">
+              <a href="#" class="d-flex align-content-center">
+                <ion-icon name="power"></ion-icon>
+                <span class="text-white ms-1">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </header>
       </div>
-
     </div>
-    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -43,5 +225,14 @@
     ></script>
 
     <script src="script.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
